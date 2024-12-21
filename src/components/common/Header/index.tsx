@@ -1,5 +1,6 @@
+import { useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Row, Col, Button } from "antd";
 
 import { resources } from "@/providers";
@@ -46,12 +47,23 @@ const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const handleNavigation = (path: string) => {
     navigate(path);
   };
 
   return (
-    <div className="bg-nav absolute w-full top-0 left-0">
+    <div
+      ref={ref}
+      className="bg-nav absolute w-full top-0 left-0 z-[9999]"
+      style={{
+        transform: isInView ? "none" : "translateY(-24px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+      }}
+    >
       <div className="py-[22px] mx-[164px]">
         <Row align="middle" justify="space-between">
           <Col>

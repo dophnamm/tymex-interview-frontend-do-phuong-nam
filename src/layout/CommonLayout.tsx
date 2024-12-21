@@ -6,6 +6,8 @@ import { useInView } from "framer-motion";
 import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
 
+import mainBg from "@/assets/images/main-bg.png";
+
 interface IProps {
   children: ReactNode;
 }
@@ -17,7 +19,12 @@ export const CommonLayout = (props: IProps) => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <Layout className="min-h-screen bg-white">
+    <Layout
+      className="min-h-screen bg-color-primary"
+      style={{
+        backgroundImage: `url(${mainBg})`,
+      }}
+    >
       <div className="flex flex-auto flex-col">
         <Header />
 
