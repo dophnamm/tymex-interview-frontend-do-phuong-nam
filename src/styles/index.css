@@ -1,0 +1,25 @@
+@import "../fonts/Inter.css";
+@import "../fonts/DroneRangerPro.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-nav {
+  background: #17161ab2;
+}
+
+.ant-typography {
+  @apply !mb-0;
+}
+
+.text-primary {
+  background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-primary {
+  background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+}
