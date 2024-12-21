@@ -13,10 +13,6 @@
   background: #17161ab2;
 }
 
-.ant-typography {
-  @apply !mb-0;
-}
-
 .text-primary {
   background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
   background-clip: text;

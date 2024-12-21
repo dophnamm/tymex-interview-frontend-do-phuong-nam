@@ -3,45 +3,12 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { Row, Col, Button } from "antd";
 
-import { resources } from "@/providers";
-
 import WorldIcon from "@/components/Icons/WorldIcon";
 import ChevronDownIcon from "@/components/Icons/ChevronDownIcon";
 
-import styles from "./styles.module.scss";
+import { navItems } from "@/utils/constant";
 
-const navItems = [
-  {
-    id: "home",
-    path: resources.home,
-    label: "Home",
-  },
-  {
-    id: "aboutUs",
-    path: resources.aboutUs,
-    label: "About US",
-  },
-  {
-    id: "ourTeams",
-    path: resources.ourTeams,
-    label: "Our Teams",
-  },
-  {
-    id: "marketplace",
-    path: resources.marketplace,
-    label: "Marketplace",
-  },
-  {
-    id: "roadmap",
-    path: resources.roadmap,
-    label: "Roadmap",
-  },
-  {
-    id: "whitepaper",
-    path: resources.whitepaper,
-    label: "Whitepaper",
-  },
-];
+import styles from "./styles.module.scss";
 
 const Header = () => {
   const location = useLocation();

@@ -1,13 +1,11 @@
+$color-pink-primary: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+
 @mixin bgPrimary {
-  background: linear-gradient(
-    91.47deg,
-    #da458f -6%,
-    #da34dd 113.05%
-  ) !important;
+  background: $color-pink-primary !important;
 }
 
 @mixin textPrimary {
-  background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+  background: $color-pink-primary;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -21,4 +19,12 @@
     @include bgPrimary;
     opacity: 0.8;
   }
+}
+
+.ant-typography {
+  @apply mb-0 #{!important};
+}
+
+.ant-typography {
+  @apply text-white;
 }

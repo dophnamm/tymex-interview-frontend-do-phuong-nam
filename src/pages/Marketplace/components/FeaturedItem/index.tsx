@@ -30,7 +30,7 @@ const FeaturedItem = (props: IProps) => {
       </div>
 
       <div className="text-center">
-        <Typography className="font-bold text-xl font-drone-ranger text-black-100">
+        <Typography className="font-bold text-xl font-drone-ranger !text-black-100">
           {values.name}
         </Typography>
       </div>
