@@ -20,7 +20,7 @@ export const CommonLayout = (props: IProps) => {
 
   return (
     <Layout
-      className="min-h-screen bg-color-primary"
+      className="min-h-screen bg-black-100"
       style={{
         backgroundImage: `url(${mainBg})`,
       }}
