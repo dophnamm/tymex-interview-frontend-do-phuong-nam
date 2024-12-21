@@ -1,6 +1,0 @@
-@import "./fonts/Inter.css";
-@import "./fonts/DroneRangerPro.css";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

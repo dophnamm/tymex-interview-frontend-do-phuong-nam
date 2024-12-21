@@ -2,9 +2,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "react-query";
 
-import "./index.css";
+import "./styles/index.css";
+import "./styles/index.scss";
+
 import App from "./App.tsx";
-import { AntdThemeProvider } from "./layout/index.tsx";
+import { AntdThemeProvider } from "./layout";
 
 const queryClient = new QueryClient();
 

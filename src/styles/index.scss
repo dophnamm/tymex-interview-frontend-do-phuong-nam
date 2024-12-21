@@ -1,0 +1,24 @@
+@mixin bgPrimary {
+  background: linear-gradient(
+    91.47deg,
+    #da458f -6%,
+    #da34dd 113.05%
+  ) !important;
+}
+
+@mixin textPrimary {
+  background: linear-gradient(91.47deg, #da458f -6%, #da34dd 113.05%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ant-btn.ant-btn-primary {
+  @include bgPrimary;
+  @apply border-none text-white transition duration-500 ease-in-out;
+
+  &:hover {
+    @include bgPrimary;
+    opacity: 0.8;
+  }
+}
