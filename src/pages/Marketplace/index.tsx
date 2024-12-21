@@ -4,6 +4,7 @@ const Marketplace = () => {
   return (
     <div>
       <Hero />
+      <div className="text-white">Marketplace</div>
     </div>
   );
 };

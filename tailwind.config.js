@@ -1,3 +1,5 @@
+import colors from "./src/theme/colors";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -5,11 +7,13 @@ export default {
     extend: {
       colors: {
         black: {
-          50: "#101010",
-          100: "#17161A",
+          ...colors.black,
         },
         yellow: {
-          100: "#FBC625",
+          ...colors.yellow,
+        },
+        pink: {
+          ...colors.pink,
         },
       },
     },
@@ -21,7 +25,7 @@ export default {
       sm: "12.8px",
       base: ["16px", "24px"],
       xl: ["18px", "28px"],
-      "2xl": "25px",
+      "2xl": ["20px", "32px"],
       "3xl": "31.25px",
       "4xl": "39.06px",
       "5xl": "48.83px",
@@ -29,6 +33,7 @@ export default {
     },
     boxShadow: {
       "drop-shadow": "-12px 12px 0px 0px #101010",
+      "btn-shadow": "0px 0px 50px 0px #BB4BFF52",
     },
   },
   plugins: [],
