@@ -3,3 +3,6 @@ bootstrap:
 
 dev:
 	yarn run dev
+
+test:
+	yarn run test:run
