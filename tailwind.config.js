@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      nav: ["Drone Ranger Pro", "sans-serif"],
+      ["drone-ranger"]: ["Drone Ranger Pro", "sans-serif"],
     },
     fontSize: {
       nav: ["14px", "20px"],
@@ -15,6 +15,7 @@ export default {
       "3xl": "31.25px",
       "4xl": "39.06px",
       "5xl": "48.83px",
+      "7xl": ["72px", "88px"],
     },
   },
   plugins: [],

@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-color-primary {
+  background-color: #17161a;
+}
+
 .bg-nav {
   background: #17161ab2;
 }
