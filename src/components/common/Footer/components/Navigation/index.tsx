@@ -23,7 +23,7 @@ const Navigation = () => {
   ];
 
   return (
-    <div className="grid gap-8">
+    <div className="grid gap-8 md:gap-4">
       <Typography.Title
         level={5}
         className="!text-2xl !text-white font-drone-ranger"
@@ -31,7 +31,13 @@ const Navigation = () => {
         Navigation
       </Typography.Title>
 
-      <Row gutter={[32, 12]} className="max-w-[366px]">
+      <Row
+        gutter={[
+          { xl: 32, md: 28 },
+          { xl: 12, md: 8 },
+        ]}
+        className="max-w-[366px]"
+      >
         {extraNav.map((item) => {
           return (
             <Col key={item.id} span={8}>

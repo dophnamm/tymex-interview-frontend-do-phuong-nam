@@ -12,7 +12,12 @@ const FeaturedItem = (props: IProps) => {
   const { values } = props;
 
   return (
-    <div className="grid gap-7">
+    <div
+      className={`
+        mb-8
+        grid gap-7 justify-center pt-[60px]
+      `}
+    >
       <div
         className={`
           relative w-[200px] h-[120px] border bg-contain bg-center

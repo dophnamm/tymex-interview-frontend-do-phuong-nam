@@ -1,0 +1,25 @@
+@use "../../../styles/index.scss" as *;
+
+.hamburger {
+  :global {
+    button {
+      @include bgPrimary;
+    }
+
+    ul > li > p {
+      @apply text-white;
+      transition: background 0.5s ease;
+
+      &.active {
+        @include textPrimary;
+
+        &::after {
+          content: "";
+          display: block;
+          @apply w-4 h-[2px] ml-1;
+          @include bgPrimary;
+        }
+      }
+    }
+  }
+}

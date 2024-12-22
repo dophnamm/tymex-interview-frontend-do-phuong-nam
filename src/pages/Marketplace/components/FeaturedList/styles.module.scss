@@ -1,0 +1,13 @@
+@use "../../../../styles/index.scss" as *;
+
+.swiper {
+  :global {
+    .swiper-pagination {
+      @apply bottom-3;
+
+      > span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+        @include bgPrimary;
+      }
+    }
+  }
+}
