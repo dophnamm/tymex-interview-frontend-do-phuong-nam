@@ -17,7 +17,9 @@ export default defineConfig(({ mode }) => {
         "@": "/src",
       },
     },
-    define: {},
+    define: {
+      "import.meta.env.BASE_URL": JSON.stringify(env.BASE_URL),
+    },
     test: {
       globals: true,
       environment: "jsdom",
