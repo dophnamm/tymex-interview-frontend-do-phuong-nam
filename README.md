@@ -26,7 +26,7 @@ Add file `.env` (Eg: from `.env.example`)
 cp .env.example .env
 ```
 
-MACOs
+macOS
 
 ```bash
     make bootstrap
