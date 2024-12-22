@@ -2,7 +2,7 @@ import { Button, Form, Input, Typography } from "antd";
 
 const SubscribeForm = () => {
   return (
-    <div className="grid gap-8">
+    <div className="grid gap-8 md:gap-4">
       <Typography.Title
         level={5}
         className="!text-2xl !text-white font-drone-ranger"

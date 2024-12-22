@@ -35,6 +35,13 @@ export default {
       "drop-shadow": "-12px 12px 0px 0px #101010",
       "btn-shadow": "0px 0px 50px 0px #BB4BFF52",
     },
+    screens: {
+      xxs: { max: "620px" },
+      xs: { min: "621px", max: "767px" },
+      sm: { min: "768px", max: "1023px" },
+      md: { min: "1024px", max: "1279px" },
+      lg: { max: "1440px" },
+    },
   },
   plugins: [],
 };

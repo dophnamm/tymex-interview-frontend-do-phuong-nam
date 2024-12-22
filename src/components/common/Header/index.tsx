@@ -9,6 +9,7 @@ import ChevronDownIcon from "@/components/Icons/ChevronDownIcon";
 import { navItems } from "@/utils/constant";
 
 import styles from "./styles.module.scss";
+import Hamburger from "../Hamburger";
 
 const Header = () => {
   const location = useLocation();
@@ -31,11 +32,15 @@ const Header = () => {
         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
       }}
     >
-      <div className="py-[22px] mx-[164px]">
+      <div className="py-[22px] mx-[160px] md:mx-[60px] sm:mx-[40px] xs:mx-[20px] xxs:mx-[20px]">
         <Row align="middle" justify="space-between">
-          <Col>
+          <Col className="hidden sm:block xs:block xxs:block">
+            <Hamburger />
+          </Col>
+
+          <Col className="sm:hidden xs:hidden xxs:hidden">
             <nav id="navigation" className={styles.headerNav}>
-              <ul className="flex gap-[60px]">
+              <ul className="flex gap-[60px] md:gap-[40px] lg:gap-[40px]">
                 {navItems.map((nav) => {
                   const { id, path, label } = nav;
                   const active = path === location.pathname ? "active" : "";
@@ -56,7 +61,13 @@ const Header = () => {
           </Col>
 
           <Col>
-            <Row align="middle" gutter={40}>
+            <Row
+              align="middle"
+              gutter={{
+                md: 40,
+                xs: 12,
+              }}
+            >
               <Col>
                 <Button
                   size="large"

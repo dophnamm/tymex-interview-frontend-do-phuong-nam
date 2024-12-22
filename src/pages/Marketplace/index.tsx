@@ -1,20 +1,20 @@
-// import { useState } from "react";
+import { useState } from "react";
 
 import Hero from "./components/Hero";
 
-// import { useGetProducts, IParameters } from "./api";
+import { useGetProducts, IParameters } from "./api";
 
-// const defaultParams: IParameters = {
-//   _start: 0,
-//   _limit: 20,
-// };
+const defaultParams: IParameters = {
+  _start: 0,
+  _limit: 20,
+};
 
 const Marketplace = () => {
-  // const [params] = useState(defaultParams);
+  const [params] = useState(defaultParams);
 
-  // const { data } = useGetProducts(params);
+  const { data } = useGetProducts(params);
 
-  // console.log(data);
+  console.log(data);
 
   return (
     <div>
