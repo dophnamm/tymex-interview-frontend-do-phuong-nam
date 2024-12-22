@@ -1,2 +1,2 @@
 export { axiosInstance } from "./axios";
-export { resources } from "./resources";
+export * from "./resources";
