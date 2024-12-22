@@ -16,21 +16,40 @@ Install `node_modules`:
 
 ```bash
 nvm install && nvm use
-make bootstrap
+```
+
+### Running the development server.
+
+Add file `.env` (Eg: from `.env.example`)
+
+```bash
+cp .env.example .env
+```
+
+MACOs
+
+```bash
+    make bootstrap
+```
+
+```bash
+    make dev
+```
+
+Window
+
+```bash
+    yarn install
+```
+
+```bash
+    yarn run dev
 ```
 
 Install a new package:
 
 ```bash
 yarn add <package_name>
-```
-
-Add file `.env` (Eg: from `.env.example`)
-
-### Running the development server.
-
-```bash
-    make dev
 ```
 
 ### Start develop new feature
