@@ -9,7 +9,7 @@ import FeaturedList from "../FeaturedList";
 
 const Hero = () => {
   return (
-    <div className="relative h-[804px]">
+    <div id="hero" className="relative h-[804px]">
       <img
         src={banner}
         alt="banner-hero"

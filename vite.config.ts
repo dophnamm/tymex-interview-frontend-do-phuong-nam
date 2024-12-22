@@ -29,5 +29,19 @@ export default defineConfig(({ mode }) => {
         inline: ["@vitest/browser"],
       },
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern", // or "modern"
+        },
+      },
+    },
+    deps: {
+      optimizer: {
+        web: {
+          include: ["element-plus"],
+        },
+      },
+    },
   };
 });

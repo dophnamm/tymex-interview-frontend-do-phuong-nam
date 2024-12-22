@@ -15,6 +15,9 @@ export default {
         pink: {
           ...colors.pink,
         },
+        grey: {
+          ...colors.grey,
+        },
       },
     },
     fontFamily: {

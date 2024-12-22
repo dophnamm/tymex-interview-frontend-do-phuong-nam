@@ -39,7 +39,7 @@ const FeaturedList = () => {
   ];
 
   return (
-    <div className="">
+    <div id="featured-list">
       <div
         className={`
         lg:hidden
