@@ -15,6 +15,9 @@ export default {
         pink: {
           ...colors.pink,
         },
+        grey: {
+          ...colors.grey,
+        },
       },
     },
     fontFamily: {
@@ -39,8 +42,16 @@ export default {
       xxs: { max: "620px" },
       xs: { min: "621px", max: "767px" },
       sm: { min: "768px", max: "1023px" },
-      md: { min: "1024px", max: "1279px" },
+      md: { min: "1024px", max: "1280px" },
+      "sm-lg": { min: "1281px", max: "1440px" },
       lg: { max: "1440px" },
+    },
+    container: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1440px",
+      "2xl": "1600px",
     },
   },
   plugins: [],

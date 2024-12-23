@@ -43,8 +43,23 @@ const theme: ThemeConfig = {
       hoverBorderColor: colors.pink[100],
       activeBorderColor: colors.pink[100],
       colorTextPlaceholder: colors.grey[100],
+      colorBorder: colors.grey[100],
       colorText: colors.white,
       borderRadiusLG: 4,
+    },
+
+    Select: {
+      colorBgContainer: "transparent",
+      hoverBorderColor: colors.pink[100],
+      activeBorderColor: colors.pink[100],
+      colorTextPlaceholder: colors.grey[100],
+      colorBorder: colors.grey[100],
+      colorText: colors.white,
+      borderRadiusLG: 4,
+    },
+
+    Slider: {
+      railSize: 8,
     },
   },
 };

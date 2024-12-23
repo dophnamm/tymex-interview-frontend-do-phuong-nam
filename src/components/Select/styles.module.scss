@@ -1,0 +1,24 @@
+@use "../../styles/index.scss" as *;
+
+.select {
+  @apply text-white border border-solid border-grey-100 bg-black-100;
+
+  :global {
+    .rc-virtual-list {
+      .rc-virtual-list-holder {
+        .rc-virtual-list-holder-inner {
+          .ant-select-item {
+            &.ant-select-item-option-selected {
+              background: $color-pink-primary #{!important};
+            }
+          }
+        }
+      }
+    }
+    .ant-select-item-empty {
+      .ant-empty-description {
+        @apply text-white;
+      }
+    }
+  }
+}

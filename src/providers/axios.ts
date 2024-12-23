@@ -13,7 +13,7 @@ axiosInstance.interceptors.request.use((config) => {
 
 axiosInstance.interceptors.response.use(
   (response) => {
-    return response;
+    return response.data;
   },
   (error) => {
     const customError = {

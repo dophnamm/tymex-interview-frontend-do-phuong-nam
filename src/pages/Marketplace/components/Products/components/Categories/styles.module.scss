@@ -1,0 +1,65 @@
+@use "../../../../../../styles/index.scss" as *;
+
+.categories {
+  :global {
+    .ant-tabs-nav {
+      @apply mb-0;
+
+      &::before {
+        @apply hidden;
+      }
+
+      .ant-tabs-nav-wrap {
+        .ant-tabs-tab {
+          @apply p-0;
+
+          button {
+            @apply border-none text-base font-semibold text-white;
+            @include bgSecondary;
+          }
+
+          &.ant-tabs-tab-active {
+            button {
+              @include bgPrimary;
+            }
+          }
+        }
+
+        .ant-tabs-ink-bar {
+          @apply hidden;
+        }
+      }
+
+      .ant-tabs-nav-operations {
+        button.ant-tabs-nav-more {
+          @apply py-0 rounded px-[10px];
+
+          background: linear-gradient(
+            81.35deg,
+            rgba(218, 69, 143, 0.4) 7.2%,
+            rgba(218, 52, 221, 0) 52.38%
+          );
+        }
+      }
+    }
+  }
+}
+
+.moreCategories {
+  :global {
+    ul.ant-tabs-dropdown-menu {
+      background: #17161ab2;
+
+      li.ant-tabs-dropdown-menu-item {
+        button {
+          @apply border-none text-base font-semibold text-white;
+          @include bgSecondary;
+
+          &:hover {
+            @apply text-white opacity-[0.8];
+          }
+        }
+      }
+    }
+  }
+}

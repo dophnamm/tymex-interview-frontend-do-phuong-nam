@@ -1,0 +1,18 @@
+.popover {
+  @apply max-w-[300px] w-full;
+
+  :global {
+    .ant-popover-arrow {
+      &::before,
+      &::after {
+        @apply bg-black-100;
+      }
+    }
+
+    .ant-popover-content {
+      .ant-popover-inner {
+        @apply bg-black-100;
+      }
+    }
+  }
+}
