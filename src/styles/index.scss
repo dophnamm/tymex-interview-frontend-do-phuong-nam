@@ -68,3 +68,29 @@ $color-pink-third: linear-gradient(
     @apply uppercase text-base font-semibold pb-0;
   }
 }
+
+.bg-nft-1 {
+  background: linear-gradient(90.13deg, #dd5afe 0%, #6366f1 100%);
+}
+
+.bg-nft-2 {
+  background: linear-gradient(90.13deg, #49dd81 0%, #22b4c6 100%);
+}
+
+.bg-nft-3 {
+  background: linear-gradient(90deg, #43a6f6 0%, #5868f3 100%);
+}
+
+.bg-nft-4 {
+  background: linear-gradient(90.13deg, #fe955a 0%, #f1da63 100%);
+}
+
+.bg-nft-5 {
+  background: linear-gradient(90.13deg, #fe5a5a 0%, #f163d2 100%);
+}
+
+.ant-tag {
+  @apply border-none py-1 px-3 text-white text-sm font-medium;
+
+  background: #313b4580;
+}

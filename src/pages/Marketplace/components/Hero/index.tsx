@@ -46,20 +46,21 @@ const Hero = () => {
         `}
       />
 
-      <div className="absolute bottom-0 w-full">
+      <div className="absolute bottom-0 left-2/4 -translate-x-2/4 w-[1600px] xxs:max-w-[370px] xs:w-[712px] sm:w-[720px] md:w-[1024px] lg:w-[1024px] xl:w-[1280px]">
         <div className="flex w-full gap-[82px] justify-between align-bottom">
-          <div className="flex items-end pl-6 mx-auto overflow-auto">
+          <div className="flex items-end pl-6 overflow-auto">
             <FeaturedList />
           </div>
 
-          <div className="relative mr-40 xxs:hidden">
+          <div className="relative xxs:hidden">
             <img
               src={djBanner}
               alt="dj-banner"
               className={`
                   w-[470px]
-                  md:w-[370px]
-                  sm:w-[280px]
+                  lg:w-[400px]
+                  md:w-[400px]
+                  sm:w-[400px]
                   xs:w-[260px]
                 `}
             />

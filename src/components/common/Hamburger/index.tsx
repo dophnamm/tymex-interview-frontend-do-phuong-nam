@@ -5,7 +5,7 @@ import { navItems } from "@/utils/constant";
 
 import { MenuToggle } from "./components/MenuToggle";
 
-import styles from "./style.module.scss";
+import styles from "./styles.module.scss";
 
 const itemVariants: Variants = {
   open: {

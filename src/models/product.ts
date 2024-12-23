@@ -1,4 +1,4 @@
-export interface Product {
+export interface IProduct {
   id: number;
   title: string;
   category: string;
@@ -8,10 +8,10 @@ export interface Product {
   theme: string;
   tier: string;
   imageId: number;
-  author: Author;
+  author: IAuthor;
 }
 
-export interface Author {
+export interface IAuthor {
   firstName: string;
   lastName: string;
   email: string;
