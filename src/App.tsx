@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { resources } from "@/providers";
 
@@ -16,7 +16,7 @@ const App = () => {
     <BrowserRouter>
       <CommonLayout>
         <Routes>
-          <Route index element={<Navigate to={resources.marketplace} />} />
+          <Route index element={<Marketplace />} />
           <Route path={resources.home} element={<Home />} />
           <Route path={resources.aboutUs} element={<AboutUs />} />
           <Route path={resources.ourTeams} element={<OurTeams />} />

@@ -1,3 +1,5 @@
+[![Production](https://api.netlify.com/api/v1/badges/f7e756e9-2e47-445b-bc0a-87778f4ccd7c/deploy-status)](https://tymex-itv-fe-do-phuong-nam.netlify.app/)
+
 #### Contact
 
 | Phone      | Email              |
