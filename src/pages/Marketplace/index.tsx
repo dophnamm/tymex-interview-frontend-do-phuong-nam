@@ -5,7 +5,9 @@ import purpleLine from "@/assets/images/purple-line.png";
 import { IProduct } from "@/models/product";
 import { IFormSearch } from "@/models/advancedSearch";
 
-import { useGetProducts } from "./api";
+import { useAutoRefresh, A_MINUTE } from "@/hooks";
+
+import { useGetProducts, getProducts, GET_PRODUCTS_KEY } from "./api";
 
 import Hero from "./components/Hero";
 import Products from "./components/Products";
@@ -23,6 +25,10 @@ const Marketplace = () => {
   const [isViewMore, setIsViewMore] = useState<boolean>(false);
 
   const { data, isLoading } = useGetProducts(params);
+  useAutoRefresh<IProduct[]>(() => getProducts(params), A_MINUTE, [
+    GET_PRODUCTS_KEY,
+    params,
+  ]);
 
   useEffect(() => {
     if (!data) return;
@@ -52,8 +58,6 @@ const Marketplace = () => {
 
     setIsViewMore(true);
   };
-
-  console.log(params);
 
   const dataView = useMemo(() => {
     if (!products) return [];

@@ -7,7 +7,7 @@ import SubscribeForm from "./components/SubscribeForm";
 const Footer = () => {
   return (
     <div className="bg-black-100 pt-[60px] pb-[208px]">
-      <div className="mx-[160px]">
+      <div className="mx-[160px] xs:mx-20 xxs:mx-5 sm:mx-20">
         <Row gutter={[24, 40]}>
           <Col md={24} xs={24} xl={9}>
             <Navigation />
@@ -26,26 +26,21 @@ const Footer = () => {
 
         <Row
           gutter={[
-            { sm: 16, xs: 16 },
-            { sm: 16, xs: 16 },
+            { lg: 32, md: 32, sm: 16, xs: 16 },
+            { lg: 32, md: 32, sm: 16, xs: 16 },
           ]}
           align="middle"
           justify="space-between"
+          className={`lg:flex-row-reverse xl:flex-row-reverse xxl:flex-row-reverse`}
         >
-          <Col xs={24} sm={24} md={24} xl={12}>
-            <Typography className="text-base font-medium">
-              ©2023 Tyme - Edit. All Rights reserved.
-            </Typography>
-          </Col>
-
-          <Col xs={24} sm={24} md={24} xl={12}>
+          <Col>
             <div
               className={`
-                flex gap-[60px] justify-end
-                sm:flex-col sm:gap-3
-                xs:flex-col xxs:flex-col
-                xs:gap-3 xxs:gap-3
-                xs:justify-start xxs:justify-start
+                flex justify-end gap-[60px]
+                md:flex-col md:gap-4
+                sm:flex-col sm:gap-4
+                xs:flex-col xs:gap-4
+                xxs:flex-col xxs:gap-4
               `}
             >
               <Typography className="text-base font-medium">
@@ -56,6 +51,12 @@ const Footer = () => {
 
               <Typography className="text-base font-medium">Privacy</Typography>
             </div>
+          </Col>
+
+          <Col xs={24} sm={24} md={24} xl={12}>
+            <Typography className="text-base font-medium">
+              ©2023 Tyme - Edit. All Rights reserved.
+            </Typography>
           </Col>
         </Row>
       </div>

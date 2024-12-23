@@ -13,7 +13,7 @@ const ContactUs = () => {
         Contact Us
       </Typography.Title>
 
-      <div className="grid gap-8 md:gap-2">
+      <div className="grid gap-8 md:gap-2 xxs:gap-2 xs:gap-2">
         <div className="flex items-center gap-2">
           <PhoneIcon />
 
