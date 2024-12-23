@@ -8,8 +8,9 @@ import ChevronDownIcon from "@/components/Icons/ChevronDownIcon";
 
 import { navItems } from "@/utils/constant";
 
-import styles from "./styles.module.scss";
 import Hamburger from "../Hamburger";
+
+import styles from "./styles.module.scss";
 
 const Header = () => {
   const location = useLocation();
@@ -25,7 +26,7 @@ const Header = () => {
   return (
     <div
       ref={ref}
-      className="bg-nav absolute w-full top-0 left-0 z-[9999]"
+      className="bg-nav fixed w-full top-0 left-0 z-[9999]"
       style={{
         transform: isInView ? "none" : "translateY(-24px)",
         opacity: isInView ? 1 : 0,

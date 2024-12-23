@@ -7,6 +7,7 @@ import Footer from "@/components/common/Footer";
 import Header from "@/components/common/Header";
 
 import mainBg from "@/assets/images/main-bg.png";
+import ScrollLayout from "./ScrollLayout";
 
 interface IProps {
   children: ReactNode;
@@ -19,29 +20,31 @@ export const CommonLayout = (props: IProps) => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <Layout
-      className="min-h-screen bg-black-100"
-      style={{
-        backgroundImage: `url(${mainBg})`,
-      }}
-    >
-      <div className="flex flex-auto flex-col">
-        <Header />
+    <ScrollLayout>
+      <Layout
+        className="min-h-screen bg-black-100"
+        style={{
+          backgroundImage: `url(${mainBg})`,
+        }}
+      >
+        <div className="flex flex-auto flex-col">
+          <Header />
 
-        <div
-          ref={ref}
-          className="flex-auto"
-          style={{
-            transform: isInView ? "none" : "translateX(-200px)",
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-          }}
-        >
-          {children}
+          <div
+            ref={ref}
+            className="flex-auto"
+            style={{
+              transform: isInView ? "none" : "translateX(-200px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+            }}
+          >
+            {children}
+          </div>
+
+          <Footer />
         </div>
-
-        <Footer />
-      </div>
-    </Layout>
+      </Layout>
+    </ScrollLayout>
   );
 };

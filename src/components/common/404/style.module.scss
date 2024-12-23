@@ -1,0 +1,10 @@
+.notFoundPage {
+  @apply mt-24;
+
+  :global {
+    .ant-result-title,
+    .ant-result-subtitle {
+      @apply text-white;
+    }
+  }
+}
