@@ -79,11 +79,12 @@ const FormAdvancedSearch = (props: IProps) => {
         >
           Reset filter
         </Button>
+
         <Button
           type="primary"
           size="large"
           htmlType="submit"
-          className="px-14 text-base font-semibold"
+          className="px-14 text-base font-semibold lg:px-7 md:px-8"
         >
           Submit
         </Button>

@@ -22,13 +22,16 @@ const Products = (props: IProps) => {
   );
 
   return (
-    <div id="products" className="mx-[160px]">
-      <Row gutter={40}>
-        <Col span={6}>
+    <div
+      id="products"
+      className="mx-[160px] sm-lg:lg:container sm-lg:mx-auto md:container md:mx-auto sm:"
+    >
+      <Row gutter={[{ lg: 40, md: 20 }, { md: 20 }]}>
+        <Col xxl={6} xl={6} md={24}>
           <AdvancedSearch onSearch={handleSearch} />
         </Col>
 
-        <Col span={18}>
+        <Col xxl={18} xl={18} md={24}>
           <div className="flex flex-col gap-10">
             <Categories />
 
