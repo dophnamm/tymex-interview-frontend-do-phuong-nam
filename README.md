@@ -1,5 +1,3 @@
-[![Production](https://api.netlify.com/api/v1/badges/f7e756e9-2e47-445b-bc0a-87778f4ccd7c/deploy-status)](https://tymex-itv-fe-do-phuong-nam.netlify.app/)
-
 #### Contact
 
 | Phone      | Email              |
@@ -13,6 +11,10 @@
 https://tymex-mock-server-node.onrender.com
 
 # React + TypeScript + Vite
+
+Production: [![Production](https://api.netlify.com/api/v1/badges/f7e756e9-2e47-445b-bc0a-87778f4ccd7c/deploy-status)](https://tymex-itv-fe-do-phuong-nam.netlify.app/)
+
+https://tymex-itv-fe-do-phuong-nam.netlify.app
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 Currently, two official plugins are available:
