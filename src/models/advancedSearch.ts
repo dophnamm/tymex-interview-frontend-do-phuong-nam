@@ -17,4 +17,5 @@ export interface IFormSearch {
   theme?: string;
   time?: string;
   price?: number | string;
+  category?: string;
 }
