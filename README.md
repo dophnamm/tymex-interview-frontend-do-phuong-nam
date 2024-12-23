@@ -115,12 +115,14 @@ yarn add <package_name>
 │   ├── pages                           business page entry and common templates
 │   │   ├── Welcome
 │   │   │   ├── index.tsx               code of page components
+│   │   │   ├── index.test.ts           code of unit test
 │   │   │   ├── styles.module.scss      page style
 │   │   │   ├── components              components use internal page, but it is recommended not to exceed three level
 │   │   │   ├── api                     folder define request call API
 │   │   │   └── utils                   tool, function, ... use internal page
 │   │   ├── User
 │   │   │   ├── index.tsx
+│   │   │   ├── index.text.ts
 │   │   │   └── styles.module.scss
 │   │   └── Admin
 │   ├── providers                       define all resources of Refine
