@@ -12,7 +12,7 @@ https://tymex-mock-server-node.onrender.com
 
 # React + TypeScript + Vite
 
-Production: [![Production](https://api.netlify.com/api/v1/badges/f7e756e9-2e47-445b-bc0a-87778f4ccd7c/deploy-status)](https://tymex-itv-fe-do-phuong-nam.netlify.app/)
+Production: [![Netlify Status](https://api.netlify.com/api/v1/badges/f7e756e9-2e47-445b-bc0a-87778f4ccd7c/deploy-status)](https://tymex-itv-fe-do-phuong-nam.netlify.app/)
 
 https://tymex-itv-fe-do-phuong-nam.netlify.app
 
