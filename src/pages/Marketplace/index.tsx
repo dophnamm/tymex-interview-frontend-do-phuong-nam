@@ -1,12 +1,13 @@
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 import purpleLine from "@/assets/images/purple-line.png";
+
+import { IFormSearch } from "@/models/advancedSearch";
 
 import Hero from "./components/Hero";
 import Products from "./components/Products";
 
 import { useGetProducts, IParameters } from "./api";
-import { IFormSearch } from "@/models/advancedSearch";
 
 const defaultParams: IParameters = {
   _start: 0,
@@ -28,14 +29,18 @@ const Marketplace = () => {
     [params]
   );
 
-  console.log(data);
+  const dataView = useMemo(() => {
+    if (!data) return [];
+
+    return data;
+  }, [data]);
 
   return (
     <div id="marketplace-page" className="overflow-hidden">
       <div className="grid gap-[120px] mb-[54px]">
         <Hero />
 
-        <Products onSearch={handleSearch} />
+        <Products onSearch={handleSearch} products={dataView} />
       </div>
 
       <img src={purpleLine} alt="purple-line" />

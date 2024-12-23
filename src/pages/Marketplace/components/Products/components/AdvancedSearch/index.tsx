@@ -34,7 +34,7 @@ const AdvancedSearch = (props: IProps) => {
 
   return (
     <div>
-      <Row className="md:justify-end gap-10 md:gap-6">
+      <Row className="xxs:justify-end xs:justify-end sm:justify-end md:justify-end gap-10 xs:gap-6 xxs:gap-6">
         <Col xl={24}>
           <Input
             placeholder="Quick Search"

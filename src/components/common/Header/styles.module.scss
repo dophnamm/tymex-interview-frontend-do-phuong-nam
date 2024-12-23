@@ -1,7 +1,7 @@
 @use "../../../styles/index.scss" as *;
 
 .headerNav {
-  @apply font-drone-ranger text-nav;
+  @apply font-drone-ranger text-s;
 
   :global {
     ul > li {
