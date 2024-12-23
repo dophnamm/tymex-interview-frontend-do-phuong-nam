@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
 import { resources } from "@/providers";
 
@@ -13,10 +13,10 @@ import Whitepaper from "./pages/Whitepaper";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <CommonLayout>
+    <CommonLayout>
+      <BrowserRouter>
         <Routes>
-          <Route index element={<Marketplace />} />
+          <Route index element={<Navigate to={resources.marketplace} />} />
           <Route path={resources.home} element={<Home />} />
           <Route path={resources.aboutUs} element={<AboutUs />} />
           <Route path={resources.ourTeams} element={<OurTeams />} />
@@ -24,8 +24,8 @@ const App = () => {
           <Route path={resources.roadmap} element={<Roadmap />} />
           <Route path={resources.whitepaper} element={<Whitepaper />} />
         </Routes>
-      </CommonLayout>
-    </BrowserRouter>
+      </BrowserRouter>
+    </CommonLayout>
   );
 };
 
