@@ -94,3 +94,33 @@ $color-pink-third: linear-gradient(
 
   background: #313b4580;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ffcc21;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #ffcc21;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #777777;
+  border-radius: 4px;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #ffcc21 #777777;
+}
+
+.ant-empty {
+  .ant-empty-description {
+    @apply text-white #{!important};
+  }
+}

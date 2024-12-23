@@ -5,8 +5,19 @@ import MoreIcon from "@/components/Icons/MoreIcon";
 import { categories } from "@/utils/constant";
 
 import styles from "./styles.module.scss";
+import { IParameters } from "@/pages/Marketplace/api";
 
-const Categories = () => {
+interface IProps {
+  onSearch: (params: IParameters) => void;
+}
+
+const Categories = (props: IProps) => {
+  const { onSearch } = props;
+
+  const handleOnChange = (activeKey: string) => {
+    onSearch({ category: activeKey });
+  };
+
   return (
     <div>
       <Tabs
@@ -24,6 +35,7 @@ const Categories = () => {
         tabBarGutter={24}
         className={styles.categories}
         popupClassName={styles.moreCategories}
+        onChange={handleOnChange}
       />
     </div>
   );

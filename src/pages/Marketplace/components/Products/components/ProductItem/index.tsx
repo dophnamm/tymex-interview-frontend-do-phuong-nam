@@ -64,14 +64,14 @@ const ProductItem = (props: IProps) => {
       <Row gutter={[16, 16]}>
         <Col span={24}>
           <Row align="middle" justify="space-between">
-            <Col>
+            <Col span={12}>
               <Typography className="text-base font-semibold">
                 {product.title}
               </Typography>
             </Col>
 
-            <Col>
-              <div className="flex gap-2 items-center">
+            <Col span={12}>
+              <div className="flex justify-end gap-2 items-center">
                 <ETHIcon />
 
                 <Typography className="text-s font-medium">

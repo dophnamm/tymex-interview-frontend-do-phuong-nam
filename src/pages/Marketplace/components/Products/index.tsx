@@ -1,5 +1,5 @@
 import { useCallback, memo } from "react";
-import { Row, Col, Button } from "antd";
+import { Row, Col, Button, Spin, Empty } from "antd";
 
 import { IProduct } from "@/models/product";
 import { IFormSearch } from "@/models/advancedSearch";
@@ -9,12 +9,16 @@ import AdvancedSearch from "./components/AdvancedSearch";
 import ProductList from "./components/ProductList";
 
 interface IProps {
-  onSearch: (values: IFormSearch) => void;
   products: IProduct[];
+  isLoadingViewMore: boolean;
+  isLoading: boolean;
+  onSearch: (values: IFormSearch) => void;
+  onClickViewMore: () => void;
 }
 
 const Products = (props: IProps) => {
-  const { onSearch, products } = props;
+  const { products, isLoadingViewMore, isLoading, onSearch, onClickViewMore } =
+    props;
 
   const handleSearch = useCallback(
     (values: IFormSearch) => {
@@ -40,15 +44,23 @@ const Products = (props: IProps) => {
 
         <Col xxl={18} xl={18} md={24} sm={24} xs={24}>
           <div className="flex flex-col gap-10 mb-14">
-            <Categories />
+            <Categories onSearch={handleSearch} />
 
-            <ProductList products={products} />
+            {products.length === 0 ? (
+              <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
+            ) : (
+              <Spin spinning={isLoading}>
+                <ProductList products={products} />
+              </Spin>
+            )}
           </div>
 
           <div className="text-center">
             <Button
               type="primary"
               className="py-6 px-[122px] text-base font-semibold"
+              loading={isLoadingViewMore}
+              onClick={onClickViewMore}
             >
               View more
             </Button>

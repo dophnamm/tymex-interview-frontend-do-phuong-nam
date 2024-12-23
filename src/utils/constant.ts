@@ -41,47 +41,47 @@ export const categories: Category[] = [
     value: "",
   },
   {
-    id: "Accessory",
+    id: "accessory",
     name: "Accessory",
     value: "accessory",
   },
   {
-    id: "Epic",
+    id: "epic",
     name: "Epic",
     value: "epic",
   },
   {
-    id: "Hat",
+    id: "hat",
     name: "Hat",
     value: "hat",
   },
   {
-    id: "Legendary",
+    id: "legendary",
     name: "Legendary",
     value: "legendary",
   },
   {
-    id: "Lower Body",
+    id: "lower Body",
     name: "Lower Body",
     value: "lower body",
   },
   {
-    id: "Mythic",
+    id: "mythic",
     name: "Mythic",
     value: "mythic",
   },
   {
-    id: "Shoes",
+    id: "shoes",
     name: "Shoes",
     value: "shoes",
   },
   {
-    id: "Rare",
+    id: "rare",
     name: "Rare",
     value: "rare",
   },
   {
-    id: "Upper Body",
+    id: "upper Body",
     name: "Upper Body",
     value: "upper body",
   },
@@ -175,11 +175,11 @@ export const price: SelectOption[] = [
   {
     id: "lowToHigh",
     label: "Low to high",
-    value: 0,
+    value: "asc",
   },
   {
     id: "hightToLow",
     label: "High to low",
-    value: 1,
+    value: "desc",
   },
 ];

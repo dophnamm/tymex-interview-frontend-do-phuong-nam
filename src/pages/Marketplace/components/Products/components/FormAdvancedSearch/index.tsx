@@ -25,6 +25,11 @@ const FormAdvancedSearch = (props: IProps) => {
     price: "",
   };
 
+  const handleClear = () => {
+    formInstance.resetFields();
+    onFinish(defaultValues);
+  };
+
   return (
     <Form
       layout="vertical"
@@ -75,6 +80,7 @@ const FormAdvancedSearch = (props: IProps) => {
           type="text"
           size="large"
           icon={<ClearIcon />}
+          onClick={handleClear}
           className="!text-white !px-0 text-base font-semibold"
         >
           Reset filter
