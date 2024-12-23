@@ -36,7 +36,7 @@ export const navItems = [
 
 export const categories: Category[] = [
   {
-    id: "all",
+    id: "",
     name: "All",
     value: "",
   },

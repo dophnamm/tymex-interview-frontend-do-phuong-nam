@@ -1,3 +1,15 @@
+#### Contact
+
+| Phone      | Email              |
+| ---------- | ------------------ |
+| 0764641209 | dophnamm@gmail.com |
+
+# Server Mock (NodeJS + json-server)
+
+<span style="color: red; font-weight: bold;">⚠️ Warning:</span> Since this server is hosted on a free domain, please click the link to wake it up. Sorry for the inconvenience
+
+https://tymex-mock-server-node.onrender.com
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -36,6 +48,10 @@ macOS
     make dev
 ```
 
+```bash
+    make test
+```
+
 Window
 
 ```bash
@@ -44,6 +60,10 @@ Window
 
 ```bash
     yarn run dev
+```
+
+```bash
+    yarn run test:run
 ```
 
 Install a new package:
@@ -119,3 +139,7 @@ yarn add <package_name>
 - **Ant Design** [Docs](https://refine.dev/docs/ui-frameworks/antd/tutorial/)
 - **React Router** [Docs](https://refine.dev/docs/core/providers/router-provider/)
 - **React Query** [Docs](https://tanstack.com/query/v3/docs/framework/react/overview)
+
+## Source
+
+- [Figma](https://www.figma.com/design/5vYZWIUgTNJ1Ud7RfV2zq4/Untitled?node-id=1-163&t=yyG8ZlLoVnuryjCy-0)

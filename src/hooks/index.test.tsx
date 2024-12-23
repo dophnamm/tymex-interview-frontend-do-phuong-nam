@@ -1,6 +1,10 @@
-import { renderHook, act } from "@testing-library/react";
+import { ReactNode } from "react";
+import { act } from "@testing-library/react";
+import { renderHook } from "@testing-library/react-hooks";
 import { describe, it, expect, vi } from "vitest";
-import { useDebounce } from "./index";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+import { useDebounce, useAutoRefresh } from "./index";
 
 describe("useDebounce", () => {
   it("should return initial value immediately", () => {
@@ -76,5 +80,31 @@ describe("useDebounce", () => {
 
     clearTimeoutSpy.mockRestore();
     vi.useRealTimers();
+  });
+});
+
+const Wrapper = ({ children }: { children: ReactNode }) => {
+  const queryClient = new QueryClient();
+
+  return (
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+  );
+};
+
+describe("useAutoRefresh", () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
+  });
+
+  it("fetches data initially", async () => {
+    const mockData = { value: "test" };
+    const fetchData = vi.fn().mockResolvedValue(mockData);
+
+    const { result } = renderHook(() => useAutoRefresh(fetchData, 1000, [1]), {
+      wrapper: Wrapper,
+    });
+
+    expect(result.current.isLoading).toBe(true);
+    expect(fetchData).toHaveBeenCalledTimes(1);
   });
 });
