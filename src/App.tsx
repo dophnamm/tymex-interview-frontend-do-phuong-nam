@@ -13,8 +13,8 @@ import Whitepaper from "./pages/Whitepaper";
 
 const App = () => {
   return (
-    <CommonLayout>
-      <BrowserRouter>
+    <BrowserRouter>
+      <CommonLayout>
         <Routes>
           <Route index element={<Navigate to={resources.marketplace} />} />
           <Route path={resources.home} element={<Home />} />
@@ -24,8 +24,8 @@ const App = () => {
           <Route path={resources.roadmap} element={<Roadmap />} />
           <Route path={resources.whitepaper} element={<Whitepaper />} />
         </Routes>
-      </BrowserRouter>
-    </CommonLayout>
+      </CommonLayout>
+    </BrowserRouter>
   );
 };
 
