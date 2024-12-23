@@ -58,8 +58,9 @@ const Hero = () => {
               alt="dj-banner"
               className={`
                   w-[470px]
-                  md:w-[370px]
-                  sm:w-[280px]
+                  lg:w-[400px]
+                  md:w-[400px]
+                  sm:w-[400px]
                   xs:w-[260px]
                 `}
             />
