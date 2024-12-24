@@ -35,9 +35,12 @@ export const useGetProducts = (params?: IParameters) => {
     },
     onError: (error) => {
       const statusCode = error?.status;
-      const description = errorMsg[statusCode];
+      const message = errorMsg[statusCode];
 
-      api?.error({ message: statusCode, description });
+      api?.error({
+        message: error?.message ?? message,
+        description: statusCode,
+      });
     },
     staleTime: Infinity,
     retry: false,
