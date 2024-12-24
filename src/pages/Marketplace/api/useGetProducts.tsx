@@ -39,6 +39,7 @@ export const useGetProducts = (params?: IParameters) => {
 
       api?.error({ message: statusCode, description });
     },
+    staleTime: Infinity,
     retry: false,
   });
 
