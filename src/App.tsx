@@ -11,21 +11,25 @@ import Marketplace from "./pages/Marketplace";
 import Roadmap from "./pages/Roadmap";
 import Whitepaper from "./pages/Whitepaper";
 
+import { NotificationProvider } from "@/components/common/Notification";
+
 const App = () => {
   return (
-    <BrowserRouter>
-      <CommonLayout>
-        <Routes>
-          <Route index element={<Navigate to={resources.marketplace} />} />
-          <Route path={resources.home} element={<Home />} />
-          <Route path={resources.aboutUs} element={<AboutUs />} />
-          <Route path={resources.ourTeams} element={<OurTeams />} />
-          <Route path={resources.marketplace} element={<Marketplace />} />
-          <Route path={resources.roadmap} element={<Roadmap />} />
-          <Route path={resources.whitepaper} element={<Whitepaper />} />
-        </Routes>
-      </CommonLayout>
-    </BrowserRouter>
+    <NotificationProvider>
+      <BrowserRouter>
+        <CommonLayout>
+          <Routes>
+            <Route index element={<Navigate to={resources.marketplace} />} />
+            <Route path={resources.home} element={<Home />} />
+            <Route path={resources.aboutUs} element={<AboutUs />} />
+            <Route path={resources.ourTeams} element={<OurTeams />} />
+            <Route path={resources.marketplace} element={<Marketplace />} />
+            <Route path={resources.roadmap} element={<Roadmap />} />
+            <Route path={resources.whitepaper} element={<Whitepaper />} />
+          </Routes>
+        </CommonLayout>
+      </BrowserRouter>
+    </NotificationProvider>
   );
 };
 

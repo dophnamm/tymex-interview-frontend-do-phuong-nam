@@ -1,4 +1,5 @@
 import axios from "axios";
+import { HTTPError } from "@/types";
 
 const axiosInstance = axios.create();
 
@@ -16,7 +17,7 @@ axiosInstance.interceptors.response.use(
     return response.data;
   },
   (error) => {
-    const customError = {
+    const customError: HTTPError = {
       ...error,
       message: error.response?.data?.message,
       status: error.response?.status,

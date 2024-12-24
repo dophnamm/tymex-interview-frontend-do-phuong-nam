@@ -183,3 +183,10 @@ export const price: SelectOption[] = [
     value: "desc",
   },
 ];
+
+export const errorMsg: { [key: number]: string } = {
+  404: "Not Found",
+  400: "Bad Request",
+  403: "Forbidden",
+  500: "Server Error",
+};

@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <div
       ref={ref}
-      className="bg-nav fixed w-full top-0 left-0 z-[9999]"
+      className="bg-nav fixed w-full top-0 left-0 z-[100]"
       style={{
         transform: isInView ? "none" : "translateY(-24px)",
         opacity: isInView ? 1 : 0,

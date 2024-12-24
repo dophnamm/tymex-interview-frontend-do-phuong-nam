@@ -1,9 +1,16 @@
+import { useContext } from "react";
 import { useQuery } from "react-query";
 import urlcat from "urlcat";
 
 import { axiosInstance, BASE_URL, API_PRODUCTS } from "@/providers";
+
 import { IProduct } from "@/models/product";
 import { IFormSearch } from "@/models/advancedSearch";
+
+import { NotificationContext } from "@/components/common/Notification";
+
+import { errorMsg } from "@/utils/constant";
+import { HTTPError } from "@/types";
 
 export const GET_PRODUCTS_KEY = "getProductsKey";
 
@@ -19,11 +26,20 @@ export const getProducts = async (
 };
 
 export const useGetProducts = (params?: IParameters) => {
-  const response = useQuery<IProduct[]>({
+  const { api } = useContext(NotificationContext);
+
+  const response = useQuery<IProduct[], HTTPError>({
     queryKey: [GET_PRODUCTS_KEY, params],
     queryFn: () => {
       return getProducts(params);
     },
+    onError: (error) => {
+      const statusCode = error?.status;
+      const description = errorMsg[statusCode];
+
+      api?.error({ message: statusCode, description });
+    },
+    retry: false,
   });
 
   return response;
